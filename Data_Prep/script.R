@@ -3,7 +3,7 @@ accidents <- read.csv("dft-accident-data/Accidents0515.csv", TRUE)
 casualties <- read.csv("dft-accident-data/Casualties0515.csv", TRUE)
 vehicles <- read.csv("dft-accident-data/Vehicles0515.csv", TRUE)
 
-head(accidents, n = 2)
+head(vehicles, n = 2)
 
 accidents <- accidents[!accidents$X...Accident_Index == -1,]
 casualties <- casualties[!casualties$X...Accident_Index == -1,]
@@ -17,16 +17,17 @@ trim_data <- function(frame_to_Trim) {
     # Trims any unwanted whitespace from data frame
     frame_to_Trim <- data.frame(lapply(frame_to_Trim, trimws))
 }
-
 trim_data(accidents)
 trim_data(casualties)
 trim_data(vehicles)
-
 # Loops context file name
+attach(accidents)
 for (i in 1:length(context_files)) {
     # checks if the name of the context file is the name of a column in the data frame
     if (context_files[i] %in% names(accidents)) {
         colname <- context_files[i]
+        
+        print(colname)
         # imports the data from the context file to a data frame
         # As this is all string information, each context file also gets trimed to help clean the data
         x <- read.csv(paste("dft-accident-data/ContextCSVs/", context_files[i], ".csv", sep = ""), TRUE)
@@ -34,9 +35,13 @@ for (i in 1:length(context_files)) {
         for (j in 1:nrow(x)) {
             # checks the context file to get the actual value 
             # for the index referance within the accidents data frame
-            accidents[colname == x[j, 1]] <- x[j, 2]
+            for (k in 1:nrow(accidents)) {
+                if (accidents[k, grep(colname, colnames(accidents))] == x[j, 1]) {
+                    accidents[k, grep(colname, colnames(accidents))] <- x[j, 2]
+                }
+            }
         }
-        print(head(accidents[colname], n = 50))
+        print(head(accidents[colname], n = 1))
     }
 }
 
