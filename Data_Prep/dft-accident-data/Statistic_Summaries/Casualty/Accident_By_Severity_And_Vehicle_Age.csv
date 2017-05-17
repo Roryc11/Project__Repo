@@ -1,0 +1,22 @@
+"","Vehicle_Type","0_4","5_9","10_14","15_19","20_24","25_30","30+"
+"7","Car",592588,818452,573693,102849,10831,1981,1210
+"13","Van / Goods 3.5 tonnes mgw or under",55745,43329,16281,2140,239,48,28
+"3","Motorcycle 125cc and under",30671,18311,6154,1988,986,476,429
+"9","Bus or coach (17 or more pass seats)",26464,30358,18650,4183,1230,282,84
+"5","Motorcycle over 500cc",25204,27841,16759,6970,2276,784,583
+"15","Goods 7.5 tonnes mgw and over",22938,16109,3538,509,83,23,12
+"6","Taxi/Private hire car",17300,27276,7175,863,21,2,1
+"2","Motorcycle 50cc and under",15839,10246,2668,550,192,122,108
+"4","Motorcycle over 125cc and up to 500cc",6767,5930,3911,2549,1120,589,668
+"14","Goods over 3.5t. and under 7.5t",5487,4906,1720,383,79,32,7
+"18","Other vehicle",2789,1891,551,281,149,118,94
+"8","Minibus (8 - 16 passenger seats)",2024,2617,1109,176,14,4,2
+"11","Agricultural vehicle",1894,1104,566,255,171,84,63
+"20","Goods vehicle - unknown weight",175,173,83,19,1,0,0
+"19","Motorcycle - unknown cc",67,61,51,22,10,7,4
+"16","Mobility scooter",17,0,0,0,0,0,0
+"17","Electric motorcycle",3,2,1,0,0,0,0
+"21","Data missing or out of range",1,0,0,0,0,0,0
+"1","Pedal cycle",0,0,0,0,0,0,0
+"10","Ridden horse",0,0,0,0,0,0,0
+"12","Tram",0,0,0,0,0,0,0
